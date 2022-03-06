@@ -3,7 +3,9 @@ function CalcularPeso() {
     const gravTierra = 9.8;
     const gravMarte = 3.7;
     const gravJupiter = 24.8;
-    if (document.getElementById('planets').value === 'Marte') {
+    if(!peso){
+        return document.getElementById('answer').innerHTML = 'Ingrese un valor numerico🔢'
+    }else if (document.getElementById('planets').value === 'Marte') {
         let pesoMarte = (peso * gravMarte) / gravTierra;
         pesoMarte = parseFloat(pesoMarte)
         document.getElementById('answer').innerHTML = 'Su peso en Marte es de: <strong>' + pesoMarte.toFixed(2) + '</strong>'
