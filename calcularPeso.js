@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('input[type=text]').forEach( node => node.addEventListener('keypress', e => {
+      if(e.keyCode == 13) {
+        e.preventDefault();
+        CalcularPeso()
+      }
+    }))
+  });
+
 function CalcularPeso() {
     let peso = parseInt(document.getElementById('peso').value);
     const gravTierra = 9.8;
